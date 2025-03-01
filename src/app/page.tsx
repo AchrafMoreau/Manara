@@ -19,7 +19,7 @@ import Clinets from "@/components/clinets";
 export default function Home() {
   useEffect( () => {
     const lenis = new Lenis()
-    function raf(time) {
+    function raf(time:any) {
       lenis.raf(time)
       requestAnimationFrame(raf)
     }
@@ -63,7 +63,7 @@ export default function Home() {
         <div className="mt-4 ml-10">
           <InteractiveHoverButton className="shadow-xl text-black dark:text-white">Discover Our Solution</InteractiveHoverButton>
         </div>
-        <div className="sm:hidden shadow-xl w-[400px] p-10 md:flex flex-col note rounded-t-[2vw]">
+        <div className="hidden shadow-xl w-[400px] p-10 md:flex flex-col note rounded-t-[2vw]">
           <p>Do you plan water?</p>
           <h4 className="leading-none py-3">
             Additional training as a building services planner specializing in sanitation
@@ -71,19 +71,19 @@ export default function Home() {
           <p>see more</p>
         </div>
     </div>
-    <div className="mx-20 justify-center items-center flex flex-col my-20">
+    <div className="mx-10 md:mx-20 justify-center items-center flex flex-col my-20">
       <h1 className="my-5">Our Clinets</h1>
       <Clinets />
     </div>
-    <div className="projects mt-12 mx-20 ">
+    <div className="projects mt-12 mx-10 md:mx-20 ">
       <div className="flex flex-col md:flex-row justify-between items-center mb-5 text-foreground">
         <h1 className="ml-4 text-center">Latest Projects</h1>
         <InteractiveHoverButton className="shadow-xl">See More Projects</InteractiveHoverButton>
       </div>
       <FocusCards cards={cards} />
     </div>
-    <div className="mt-[150px]  py-10 flex justify-center items-center min-h-3/4 w-full ">
-      <div className="mission mx-20 shadow-xl h-[70vh] text-white border-l border-blue-300 px-10 flex flex-col justify-center items-center rounded-xl">
+    <div className="mt-[150px] py-10 flex justify-center items-center min-h-3/4 w-full ">
+      <div className="mission mx-10 md:mx-20 shadow-xl h-[70vh] text-white border-l border-blue-300 px-10 flex flex-col justify-center items-center rounded-xl">
         <h3 className="font-bold leading-[1] mb-5">Notre mission</h3>
         <p className="text-center mx-5 md:w-[50%] font-bold mb-10">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero vitae dolorum voluptate laudantium rerum quibusdam consequatur, reiciendis voluptatibus quis ullam, nemo ipsum cumque nesciunt explicabo magni corrupti dignissimos nobis. Incidunt.

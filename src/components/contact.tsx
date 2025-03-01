@@ -19,7 +19,7 @@ import { MapProvider } from "@/providers/map-provider";
 
 const Contact = () => {
     return (
-        <div className="flex flex-col md:flex-row mx-20 pt-10">
+        <div className="flex flex-col md:flex-row mx-10 md:mx-20 pt-10">
             <div className="flex flex-col md:w-[50%] mb-5 md:mb-0">
                 <h1>Get In Touch</h1>
                 <p>We're here to support you in Making Sustainability Happen. Get in touch for a collaborative discussion about what that could look like for your organisation.</p>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { Dispatch, SetStateAction, useState } from 'react'
 import Image from 'next/image';
 import Background from '../../public/images/2.jpg';
 import { useScroll, useTransform, motion } from 'framer-motion';
@@ -9,7 +9,7 @@ import GridTwo from './grid-contents/grid-two';
 import GridThree from './grid-contents/grid-three';
 
 export default function Intro() {
-    const container = useRef();
+    const container = useRef(null);
     const [activeItem, setActiveItem] = useState<string>("gridOne")
     const { scrollYProgress } = useScroll({
       target: container,
@@ -21,7 +21,7 @@ export default function Intro() {
   
     return (
     <motion.div style={{y}} className='relative h-full mt-0'>
-        <div className="pl-20 flex flex-col justify-center items-center w-full">
+        <div className="px-10 md:pl-20 flex flex-col justify-center items-center w-full">
             <div className="self-end">
                 <LineSvg />
             </div>
@@ -33,7 +33,7 @@ export default function Intro() {
                 <Sidebar setActiveItem={setActiveItem} active={activeItem} />
 
                 {/* Right Content */}
-                <div className="flex-1 mr-20">
+                <div className="flex-1 mx-0 md:mr-20">
                 {activeItem == "gridOne" && <GridOne />}
                 {activeItem == "gridTwo" && <GridTwo />}
                 {activeItem == "gridThree" && <GridThree />}
