@@ -19,6 +19,7 @@ const Clinets = () => {
         <Marquee pauseOnHover className="[--duration:20s]">
             {firstRow.map((elm) => (
                     <figure
+                        key={elm.id}
                         className={cn(
                             "relative h-[150px] w-[150px] cursor-pointer overflow-hidden rounded-xl border p-4",
                             // light styles
@@ -29,7 +30,6 @@ const Clinets = () => {
                 >
                     <div className="w-[10px] h-[100px]">
                     <Image
-                        key={elm.id}
                         src={elm.src}
                         alt={elm.alt}
                         fill
