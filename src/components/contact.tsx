@@ -14,6 +14,8 @@ import { Label } from "@/components/ui/label";
 import { MagicCard } from "./magicui/magic-card";
 import { useTheme } from "next-themes";
 import { Textarea } from "./ui/textarea";
+import { MapComponent } from "./map";
+import { MapProvider } from "@/providers/map-provider";
 
 const Contact = () => {
     return (
@@ -21,9 +23,13 @@ const Contact = () => {
             <div className="flex flex-col md:w-[50%] mb-5 md:mb-0">
                 <h1>Get In Touch</h1>
                 <p>We're here to support you in Making Sustainability Happen. Get in touch for a collaborative discussion about what that could look like for your organisation.</p>
+                <div className="rounded pt-10">
+                  <MapProvider>
+                    <MapComponent />
+                  </MapProvider>
+                </div>
             </div>
             <div className="flex md:w-[50%] justify-center items-center">
-
                 <ContactCard />
             </div>
         </div>

@@ -52,50 +52,43 @@ export default function Home() {
   ];
   return (
     <>
-    <div className="flex flex-col md:flex-row lg:flex-row xl:flex-row h-[80vh] justify-between items-center">
-      <div className="flex ml-10 flex-col w-[50%] items-start justify-between h-full pt-12">
-          <h1 className="ml-10 text-8xl text-wrap leading-none">
-            <TextAnimate animation="blurInUp" by="word" once>
-              Manara Water Consulting
-            </TextAnimate>
-          </h1>
-          <div className="mt-4 ml-10">
-            <InteractiveHoverButton>Discover Our Solution</InteractiveHoverButton>
-          </div>
-          <WaveSVG  />
-      </div>
-
-      <div className="flex w-[50%] h-full edge">
-        <img className=" object-fill w-full h-full" src='/water_consulting.jpg'
-          alt="Water Consulting"
-        />
-      </div>
+    <div className="flex text-white flex-col hero h-[90vh] justify-center items-start rounded-b-[2vw] ">
+        <TextAnimate className="text ml-10 text-7xl text-wrap leading-none" animation="blurInUp" by="character" once as="h1">
+          Manara 
+        </TextAnimate>
+        <TextAnimate className="text ml-10 text-7xl text-wrap leading-none" animation="blurInUp" by="character" once as="h1">
+          Water 
+          Consulting
+        </TextAnimate>
+        <div className="mt-4 ml-10">
+          <InteractiveHoverButton className="shadow-xl text-black dark:text-white">Discover Our Solution</InteractiveHoverButton>
+        </div>
+        <div className="sm:hidden shadow-xl w-[400px] p-10 md:flex flex-col note rounded-t-[2vw]">
+          <p>Do you plan water?</p>
+          <h4 className="leading-none py-3">
+            Additional training as a building services planner specializing in sanitation
+          </h4>
+          <p>see more</p>
+        </div>
     </div>
     <div className="mx-20 justify-center items-center flex flex-col my-20">
       <h1 className="my-5">Our Clinets</h1>
       <Clinets />
     </div>
-    <div className="projects mt-12 mx-20">
-      <h1 className="ml-4 mb-8">Latest Projects</h1>
-      <FocusCards cards={cards} />
-      <div className="button ml-4 mt-5">
-        <InteractiveHoverButton>See More Projects</InteractiveHoverButton>
+    <div className="projects mt-12 mx-20 ">
+      <div className="flex flex-col md:flex-row justify-between items-center mb-5 text-foreground">
+        <h1 className="ml-4 text-center">Latest Projects</h1>
+        <InteractiveHoverButton className="shadow-xl">See More Projects</InteractiveHoverButton>
       </div>
+      <FocusCards cards={cards} />
     </div>
-    <div className="mt-12 py-10 flex justify-center items-center bg-gray-200 dark:bg-gray-800 min-h-3/4 w-full whythis">
-      <div className="flex gap-5 mx-20">
-        <div className="imagesEdge w-full h-full">
-          <Image
-            width={500}
-            height={300}
-            src="/water_consulting.jpg"
-            alt="Water Consulting"
-          />
-        </div>
-        <div className="info border-l border-blue-300 px-10 flex flex-col justify-center items-center">
-          <h4 className="font-bold leading-[1] mb-5 self-start">Notre mission</h4>
-          <p>Nous concevons et exploitons des infrastructures et bâtiments intelligents qui répondent aux défis liés à l'urgence climatique et améliorent le cadre de vie des populations dans le monde entier.</p>
-        </div>
+    <div className="mt-[150px]  py-10 flex justify-center items-center min-h-3/4 w-full ">
+      <div className="mission mx-20 shadow-xl h-[70vh] text-white border-l border-blue-300 px-10 flex flex-col justify-center items-center rounded-xl">
+        <h3 className="font-bold leading-[1] mb-5">Notre mission</h3>
+        <p className="text-center mx-5 md:w-[50%] font-bold mb-10">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero vitae dolorum voluptate laudantium rerum quibusdam consequatur, reiciendis voluptatibus quis ullam, nemo ipsum cumque nesciunt explicabo magni corrupti dignissimos nobis. Incidunt.
+        </p>
+        <InteractiveHoverButton className="text-foreground ">See More</InteractiveHoverButton>
       </div>
     </div>
     
