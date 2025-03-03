@@ -36,10 +36,9 @@ export default function Section() {
                     Your browser does not support the video tag.
                 </video>
                 <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center px-6 bg-black/70">
-
                     <div className="flex flex-col justify-center items-start">
                         <motion.h2
-                            className="text-4xl md:text-5xl font-bold text-primary mb-4 dark:text-secondary"
+                            className="text-4xl md:text-5xl font-bold text-secondary mb-4 dark:text-secondary"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}

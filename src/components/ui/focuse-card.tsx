@@ -77,7 +77,7 @@ export default function FocusCards({ cards }: { cards: ProjetType[] }) {
   return (
     <div className="projects mt-12 mx-10 md:mx-20 ">
       <div className="flex flex-col md:flex-row justify-between items-center mb-5 text-foreground">
-        <div className="flex flex-col justify-center items-start">
+        <div className="flex flex-col justify-center items-start mb-6">
           <motion.h2
             className="text-4xl md:text-5xl font-bold text-primary mb-4 dark:text-secondary"
             initial={{ opacity: 0, y: 20 }}

@@ -1,9 +1,20 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import { TracingBeam } from "./ui/tracing-beam";
+import Lenis from "lenis";
 
 export function ProjectDetails({ project } : { project : ProjetType }) {
+    useEffect( () => {
+        const lenis = new Lenis()
+
+        function raf(time:any) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+    }, [])
 
   return (
     <div className="flex  flex-col-reverse md:flex-row mx-10">

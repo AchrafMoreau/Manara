@@ -23,36 +23,25 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
 const components: { title: string; href: string; description: string }[] = [
   {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
-    description: "A modal dialog that interrupts the user with important content and expects a response.",
+    title: "Tunnels",
+    href: "/Tunnels",
+    description: "Our tunnelling and underground infrastructure services span all stages of the project, from the initial planning stage, through to design, construction and operation. Our capability combines all aspects of underground works, from tunnels and shafts, through to underground caverns and structures.",
   },
   {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
-    description: "For sighted users to preview content available behind a link.",
+    title: "Water Sensitive Urban Design",
+    href: "/WaterSensitiveUrbanDesign",
+    description: "With over 6 years’ experience in urban development, our stormwater and integrated water management solutions provide practical and innovative outcomes for all projects from residential lots to community master planning at regional levels.",
   },
   {
-    title: "Progress",
-    href: "/docs/primitives/progress",
+    title: "Water Services Coordination",
+    href: "/WaterServicesCoordination",
     description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+      "Our Water Services Coordination capabilities are integral to projects ranging from urban developments and transport infrastructure to large-scale industrial and commercial ventures. By delivering innovative and future-ready water solutions, we contribute to smarter, greener, and more connected communities.",
   },
   {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
-  },
-  {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
-    description: "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-  },
-  {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+    title: "Planning",
+    href: "/Planning",
+    description: "Manara has an extensive range of planning expertise including masterplanning, economic and environmental planning, feasibility studies, emerging policy development, community and stakeholder management, and metropolitan and regional planning.",
   },
 ]
 
@@ -100,19 +89,19 @@ const Navbar = () => {
                       >
                         <div className="mb-2 mt-4 text-lg font-medium">Manara Water Consulting</div>
                         <p className="text-sm leading-tight text-muted-foreground">
-                          Beautifully designed components built with Radix UI and Tailwind CSS.
+                          Sustainable Water Solutions for a Thriving Future. 💧🌍
                         </p>
                       </a>
                     </NavigationMenuLink>
                   </li>
-                  <ListItem href="/docs" title="Introduction">
-                    Re-usable components built using Radix UI and Tailwind CSS.
+                  <ListItem href="/Planning" title="Planning">
+                    Manara has an extensive range of planning expertise including masterplanning, economic and environmental planning, feasibility studies, emerging policy development, community and stakeholder management, and metropolitan and regional planning.
                   </ListItem>
-                  <ListItem href="/docs/installation" title="Installation">
-                    How to install dependencies and structure your app.
+                  <ListItem href="/WaterServicesCoordination" title="Water Services Coordination">
+                    Our Water Services Coordination capabilities are integral to projects ranging from urban developments and transport infrastructure to large-scale industrial and commercial ventures. By delivering innovative and future-ready water solutions, we contribute to smarter, greener, and more connected communities.
                   </ListItem>
-                  <ListItem href="/docs/primitives/typography" title="Typography">
-                    Styles for headings, paragraphs, lists...etc
+                  <ListItem href="/WaterSensitiveUrbanDesign" title="Water Sensitive Urban Design">
+                    With over 6 years’ experience in urban development, our stormwater and integrated water management solutions provide practical and innovative outcomes for all projects from residential lots to community master planning at regional levels.
                   </ListItem>
                 </ul>
               </NavigationMenuContent>
