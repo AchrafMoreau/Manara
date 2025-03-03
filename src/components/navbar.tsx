@@ -80,14 +80,16 @@ const Navbar = () => {
           : "bg-transparent text-white" 
       } `}
     >
-      <p>Logo</p>
+      <Link href="/">
+        <p>Logo</p>
+      </Link>
 
       {/* Desktop Navigation - Hidden on mobile */}
       <div className="hidden md:block">
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="bg-transparent">Our Solutions</NavigationMenuTrigger>
+              <NavigationMenuTrigger className="bg-transparent">Services</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                   <li className="row-span-3">
@@ -116,7 +118,7 @@ const Navbar = () => {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="bg-transparent">News</NavigationMenuTrigger>
+              <NavigationMenuTrigger className="bg-transparent">Projects</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                   {components.map((component) => (
@@ -128,7 +130,7 @@ const Navbar = () => {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/docs" legacyBehavior passHref>
+              <Link href="/About-Us" legacyBehavior passHref>
                 <NavigationMenuLink className={`${navigationMenuTriggerStyle()} bg-transparent`}>
                   About Us
                 </NavigationMenuLink>

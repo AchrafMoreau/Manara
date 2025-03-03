@@ -12,13 +12,11 @@ export default {
   		colors: {
 			primary: 'rgb(0, 71, 102)',        // #004766
 			secondary: 'rgb(0, 119, 179)',     // #0077b3
-			neutral: 'rgb(18, 18, 18)',        // #121212
 			accentGreen: 'rgb(30, 125, 50)',   // #1e7d32
 			text: 'rgb(240, 240, 240)',        // #f0f0f0
 
 			darkPrimary: 'rgb(0, 51, 77)',     // Darker shade of primary color
 			darkSecondary: 'rgb(0, 91, 153)',  // Darker shade of secondary color
-			darkNeutral: 'rgb(10, 10, 10)',    // Darker neutral background
 			darkAccentGreen: 'rgb(15, 85, 38)', // Darker accent green
 			darkText: 'rgb(220, 220, 220)',    // Lighter text color for dark mode
     
