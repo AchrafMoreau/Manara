@@ -34,7 +34,7 @@ export default function MissionVision() {
           />
         </div>
         <div className="grid md:grid-cols-2 gap-12">
-          <div className="bg-white p-8 rounded-lg shadow-lg">
+          <div className="bg-white dark:bg-gray-200 p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl font-semibold mb-4 text-purple-600">Our Mission</h3>
             <p className="text-slate-700 leading-relaxed">
               To empower businesses and individuals with innovative technology solutions that drive growth, efficiency,
@@ -42,7 +42,7 @@ export default function MissionVision() {
               creativity, and unwavering commitment to excellence.
             </p>
           </div>
-          <div className="bg-white p-8 rounded-lg shadow-lg">
+          <div className="bg-white dark:bg-gray-200 p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl font-semibold mb-4 text-blue-600">Our Vision</h3>
             <p className="text-slate-700 leading-relaxed">
               To be a global leader in technology innovation, recognized for our transformative solutions and positive

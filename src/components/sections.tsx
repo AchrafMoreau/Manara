@@ -1,3 +1,4 @@
+'use client'
 import Image from 'next/image';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import { useRef } from 'react';
@@ -35,7 +36,23 @@ export default function Section() {
                     Your browser does not support the video tag.
                 </video>
                 <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center px-6 bg-black/70">
-                    <h1 className="text-4xl font-bold">Welcome to Our Global Mission</h1>
+
+                    <div className="flex flex-col justify-center items-start">
+                        <motion.h2
+                            className="text-4xl md:text-5xl font-bold text-primary mb-4 dark:text-secondary"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6 }}
+                        >
+                            Welcome to Our Global Mission
+                        </motion.h2>
+                        <motion.div
+                            className="w-24 h-1 mx-auto bg-blue-500 rounded-full"
+                            initial={{ width: 0 }}
+                            animate={{ width: 96 }}
+                            transition={{ duration: 0.8, delay: 0.3 }}
+                        />
+                    </div>
                     <p className="mt-2 text-lg max-w-2xl">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id sed doloribus consequuntur doloremque sapiente, error expedita, vero suscipit eligendi, magni quasi. Animi quia fugit nemo architecto perferendis aliquam, id ea.
                     </p>

@@ -12,17 +12,6 @@ import { InteractiveHoverButton } from "./magicui/interactive-hover-button"
 import { Button } from "./ui/button"
 
 
-const AnimatedSection = ({ children, progress }: { children: React.ReactNode; progress: MotionValue<number> }) => {
-  const opacity = useTransform(progress, [0, 0.5, 1], [0, 1, 0])
-  const scale = useTransform(progress, [0, 0.5, 1], [0.8, 1, 0.8])
-  const y = useTransform(progress, [0, 0.5, 1], [50, 0, -50])
-
-  return (
-    <motion.div style={{ opacity, scale, y }} className="mb-16">
-      {children}
-    </motion.div>
-  )
-}
 
 export default function AnimatedFooter() {
   const containerRef = useRef<HTMLDivElement>(null)

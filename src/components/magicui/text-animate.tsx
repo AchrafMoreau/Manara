@@ -300,7 +300,7 @@ const defaultItemAnimationVariants: Record<
   },
 };
 
-export function TextAnimate({
+export const TextAnimate = ({
   children,
   delay = 0,
   duration = 0.3,
@@ -313,7 +313,7 @@ export function TextAnimate({
   by = "word",
   animation = "fadeIn",
   ...props
-}: TextAnimateProps) {
+}: TextAnimateProps)  => {
   const MotionComponent = motion.create(Component);
 
   // Use provided variants or default variants based on animation type

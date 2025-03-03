@@ -187,7 +187,7 @@ export default function AboutUs(){
             <div className="flex text-white flex-col aboutUs h-[90vh] justify-center items-start rounded-b-[2vw]"
             
             >
-                <TextAnimate className="text ml-10 text-7xl text-wrap leading-none" animation="blurInUp" by="character" once as="h2">
+                <TextAnimate className="text ml-10 text-7xl text-wrap leading-none" animation="blurInUp" by="word" once as="h2">
                     Who We Are
                 </TextAnimate>
                 <div className="mt-4 ml-10 w-full md:w-[50%]">

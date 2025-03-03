@@ -137,7 +137,7 @@ const Navbar = () => {
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/docs" legacyBehavior passHref>
+              <Link href="/Contact-Us" legacyBehavior passHref>
                 <NavigationMenuLink className={`${navigationMenuTriggerStyle()} bg-transparent`}>
                   Contact Us
                 </NavigationMenuLink>
@@ -212,14 +212,14 @@ const Navbar = () => {
 
               <div className="px-2 py-4 flex flex-col gap-2">
                 <Link
-                  href="/docs"
+                  href="/About-Us"
                   className="font-medium hover:text-primary transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   About Us
                 </Link>
                 <Link
-                  href="/docs"
+                  href="/Contact-Us"
                   className="font-medium hover:text-primary transition-colors"
                   onClick={() => setIsOpen(false)}
                 >

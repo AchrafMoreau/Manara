@@ -48,9 +48,8 @@ export default function CoreValues() {
         </div>
 
         <div ref={containerRef} className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-          {/* Integrity Card */}
           <motion.div
-            className="value-card bg-white rounded-xl shadow-lg p-8 relative overflow-hidden opacity-0 transform translate-y-10"
+            className="value-card bg-white dark:bg-gradient-to-r from-secondary to-primary rounded-xl shadow-lg p-8 relative overflow-hidden opacity-0 transform translate-y-10"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -67,7 +66,7 @@ export default function CoreValues() {
                 <Shield className="w-8 h-8 text-blue-600" />
               </div>
               <h3 className="text-2xl font-bold text-blue-900 mb-4">Integrity</h3>
-              <p className="text-gray-600">
+              <p className="">
                 We uphold the highest ethical standards in all our operations, ensuring transparency, honesty, and
                 accountability in every project we undertake.
               </p>
@@ -78,7 +77,7 @@ export default function CoreValues() {
 
           {/* Innovation Card */}
           <motion.div
-            className="value-card bg-white rounded-xl shadow-lg p-8 relative overflow-hidden opacity-0 transform translate-y-10"
+            className="value-card bg-white dark:bg-gradient-to-r from-secondary to-primary rounded-xl shadow-lg p-8 relative overflow-hidden opacity-0 transform translate-y-10"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -94,8 +93,8 @@ export default function CoreValues() {
               <div className="flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-6">
                 <Lightbulb className="w-8 h-8 text-teal-600" />
               </div>
-              <h3 className="text-2xl font-bold text-teal-900 mb-4">Innovation</h3>
-              <p className="text-gray-600">
+              <h3 className="text-2xl font-bold text-primary mb-4">Innovation</h3>
+              <p className="">
                 We continuously seek cutting-edge solutions and technologies to address complex water challenges,
                 driving progress in sustainable water management.
               </p>
@@ -106,7 +105,7 @@ export default function CoreValues() {
 
           {/* Customer-Centric Card */}
           <motion.div
-            className="value-card bg-white rounded-xl shadow-lg p-8 relative overflow-hidden opacity-0 transform translate-y-10"
+            className="value-card bg-white dark:bg-gradient-to-r from-secondary to-primary rounded-xl shadow-lg p-8 relative overflow-hidden opacity-0 transform translate-y-10"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
@@ -123,7 +122,7 @@ export default function CoreValues() {
                 <Users className="w-8 h-8 text-cyan-600" />
               </div>
               <h3 className="text-2xl font-bold text-cyan-900 mb-4">Customer-Centric</h3>
-              <p className="text-gray-600">
+              <p className="">
                 We place our clients' needs at the heart of everything we do, delivering tailored solutions that exceed
                 expectations and build lasting partnerships.
               </p>

@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -21,7 +22,22 @@ const Contact = () => {
     return (
         <div className="flex flex-col md:flex-row mx-10 md:mx-20 pt-10">
             <div className="flex flex-col md:w-[50%] mb-5 md:mb-0">
-                <h1>Get In Touch</h1>
+                <div className="flex flex-col justify-center items-start mb-5">
+                    <motion.h2
+                        className="text-4xl md:text-5xl font-bold text-primary mb-4 dark:text-secondary"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                    >
+                        Get In Touch
+                    </motion.h2>
+                    <motion.div
+                        className="w-24 h-1 bg-blue-500 rounded-full"
+                        initial={{ width: 0 }}
+                        animate={{ width: 96 }}
+                        transition={{ duration: 0.8, delay: 0.3 }}
+                    />
+                </div>
                 <p>We're here to support you in Making Sustainability Happen. Get in touch for a collaborative discussion about what that could look like for your organisation.</p>
                 <div className="rounded pt-10">
                   <MapProvider>
@@ -75,7 +91,7 @@ const ContactCard = () => {
           </form>
         </CardContent>
         <CardFooter>
-          <Button className="w-full">Submit</Button>
+          <Button className="w-full bg-gradient-to-r from-secondary to-primary text-white">Submit</Button>
         </CardFooter>
       </MagicCard>
     </Card>

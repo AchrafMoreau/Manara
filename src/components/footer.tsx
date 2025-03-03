@@ -206,7 +206,7 @@ const Section2 = () => {
 
         </div>
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 1 }}>
-          ©2025 Our Company. All rights reserved.
+          ©2025 Manara Water Consulting. All rights reserved.
         </motion.p>
       </div>
     </div>
