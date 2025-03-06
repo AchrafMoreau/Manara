@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react"
 import { motion } from "framer-motion"
 import { Shield, Lightbulb, Users } from "lucide-react"
+import { Title } from "./title"
 
 export default function CoreValues() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -30,23 +31,7 @@ export default function CoreValues() {
   return (
     <section className="w-full py-20  overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <motion.h2
-            className="text-4xl md:text-5xl font-bold text-primary mb-4 dark:text-secondary"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            Our Core Values
-          </motion.h2>
-          <motion.div
-            className="w-24 h-1 bg-blue-500 mx-auto rounded-full"
-            initial={{ width: 0 }}
-            animate={{ width: 96 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          />
-        </div>
-
+        <Title title="Our Core Values" axAuto={true} titleClass="self-center" borderClass="mb-4"/>
         <div ref={containerRef} className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           <motion.div
             className="value-card bg-white dark:bg-gradient-to-r from-secondary to-primary rounded-xl shadow-lg p-8 relative overflow-hidden opacity-0 transform translate-y-10"
@@ -67,8 +52,7 @@ export default function CoreValues() {
               </div>
               <h3 className="text-2xl font-bold text-blue-900 mb-4">Integrity</h3>
               <p className="">
-                We uphold the highest ethical standards in all our operations, ensuring transparency, honesty, and
-                accountability in every project we undertake.
+                Nous agissons avec honnêteté, respect et responsabilité dans toutes nos initiatives.
               </p>
             </div>
 
@@ -95,8 +79,7 @@ export default function CoreValues() {
               </div>
               <h3 className="text-2xl font-bold text-primary mb-4">Innovation</h3>
               <p className="">
-                We continuously seek cutting-edge solutions and technologies to address complex water challenges,
-                driving progress in sustainable water management.
+                Nous encourageons et adoptons des approches créatives et innovatrices.. Le développement de l'itelligence collective est favorisé et les attitudes orientées « solutions » encouragées.
               </p>
             </div>
 
@@ -121,10 +104,9 @@ export default function CoreValues() {
               <div className="flex items-center justify-center w-16 h-16 bg-cyan-100 rounded-full mb-6">
                 <Users className="w-8 h-8 text-cyan-600" />
               </div>
-              <h3 className="text-2xl font-bold text-cyan-900 mb-4">Customer-Centric</h3>
+              <h3 className="text-2xl font-bold text-cyan-900 mb-4">Collaboration & Performance</h3>
               <p className="">
-                We place our clients' needs at the heart of everything we do, delivering tailored solutions that exceed
-                expectations and build lasting partnerships.
+                Nous croyons au pouvoir de la collaboration pour réaliser des progrès significatifs vers un avenir durable & Génération d'un climat propice à l'efficacité, à la performance et au bien-être avec bienveillance.
               </p>
             </div>
 

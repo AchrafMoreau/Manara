@@ -3,6 +3,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Marquee } from "./magicui/marquee";
 import  { motion }  from "framer-motion"
+import { Title } from "./title";
 
 
 export default function OurClients() {
@@ -18,22 +19,7 @@ export default function OurClients() {
     ]
     return(
     <div className="mx-10 md:mx-20 justify-center items-center flex flex-col my-20">
-      <div className="text-center mb-16">
-        <motion.h2
-            className="text-4xl md:text-5xl font-bold text-primary mb-4 dark:text-secondary"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-        >
-            Our Clients
-        </motion.h2>
-        <motion.div
-            className="w-24 h-1 bg-blue-500 mx-auto rounded-full"
-            initial={{ width: 0 }}
-            animate={{ width: 96 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-        />
-      </div>
+        <Title title="Our Clients" axAuto={true} />
         <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
             <Marquee pauseOnHover className="[--duration:20s]">
                 {firstRow.map((elm) => (

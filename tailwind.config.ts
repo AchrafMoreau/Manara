@@ -13,9 +13,10 @@ export default {
   theme: {
   	extend: {
   		colors: {
-			primary: 'rgb(0, 71, 102)',        // #004766
-			secondary: 'rgb(0, 119, 179)',     // #0077b3
-			accentGreen: 'rgb(30, 125, 50)',   // #1e7d32
+			primary: 'rgb(0,53,119)',        // #004766
+			secondary: ' rgb(2,193,200)',     // #0077b3
+			earthLight: 'rgb(163, 217, 165)',   // #1e7d32
+			earth: 'rgb(72, 161, 77)',
 			text: 'rgb(240, 240, 240)',        // #f0f0f0
 
 			darkPrimary: 'rgb(0, 51, 77)',     // Darker shade of primary color

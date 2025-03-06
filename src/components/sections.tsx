@@ -38,7 +38,7 @@ export default function Section() {
                 <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center px-6 bg-black/70">
                     <div className="flex flex-col justify-center items-start">
                         <motion.h2
-                            className="text-4xl md:text-5xl font-bold text-secondary mb-4 dark:text-secondary"
+                            className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-primary via-primary/80 to-earth  mb-4 dark:from-secondary dark:via-secondary/80 dark:to-earthLight"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6 }}
@@ -46,7 +46,7 @@ export default function Section() {
                             Welcome to Our Global Mission
                         </motion.h2>
                         <motion.div
-                            className="w-24 h-1 mx-auto bg-blue-500 rounded-full"
+                            className="w-24 h-1 bg-earth dark:bg-earthLight rounded-full mx-auto"
                             initial={{ width: 0 }}
                             animate={{ width: 96 }}
                             transition={{ duration: 0.8, delay: 0.3 }}

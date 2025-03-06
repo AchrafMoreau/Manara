@@ -6,8 +6,11 @@
 
 @layer base {
   :root {
-    --primary-rgb: 0, 107, 153;    /* #006b99 */
-    --secondary-rgb: 0, 159, 226;  /* #009fe2 */
+    
+    --primary-rgb: 0,53,119;    /* #006b99 */
+    --secondary-rgb: 2,193,200;  /* #009fe2 */
+    --earth-color: 72, 161, 77;
+    --earth-light-color: 163, 217, 165;
     --neutral-rgb: 248, 248, 248;  /* #f8f8f8 */
     --green-rgb: 40, 167, 69; 
 
@@ -185,7 +188,7 @@
 }
 
 .hero{
-  background: linear-gradient(0deg, rgb(var(--secondary-rgb)), rgba(var(--primary-rgb), 0.7) 87.65%), url("/consulting.webp");
+  background: linear-gradient(0deg, rgb(var(--secondary-rgb)), rgba(var(--primary-rgb), 0.7) 87.65%), url("https://jg7oqc4zb0.ufs.sh/f/HvI8a9wNfAj6Q9i1jZF0aGrS9VnfgChAoU3MFWER8wNsy74O");
   background-blend-mode: multiply;
   background-position: center;
   background-repeat: no-repeat;
@@ -198,7 +201,7 @@
   position: absolute;
   bottom: 0;
   right: 20px;
-  background: linear-gradient(180deg, rgb(var(--secondary-rgb)) 65.5%, rgb(var(--primary-rgb)));
+  background: linear-gradient(180deg, rgb(var(--earth-color)) 65.5%, rgb(var(--earth-light-color)));
 }
 
 .mission{
@@ -268,3 +271,13 @@
   right: 0;
 }
 
+
+.service{
+  background-image: linear-gradient(341deg, rgba(var(--secondary-rgb), 0.9), rgb(var(--primary-rgb)) 87.65%), url("/water.png");
+  background-blend-mode: multiply;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}

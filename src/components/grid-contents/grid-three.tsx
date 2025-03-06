@@ -10,27 +10,26 @@ const GridThree = () => {
       >
         <div className="max-w-xs">
           <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-            Gippity AI powers the entire universe
+            Préserver l’Eau
           </h2>
           <p className="mt-4 text-left  text-base/6 text-neutral-200">
-            With over 100,000 mothly active bot users, Gippity AI is the most
-            popular AI platform for developers.
+            Promouvoir une gestion responsable et durable des ressources en eau.
           </p>
         </div>
           <Image
-            width={500}
-            height={300}
-            src="/water_consulting.jpg"
+            width={400}
+            height={500}
+            src="/preserve.jpg"
             alt="Water Consulting"
-            className="absolute -right-4 lg:-right-[40%] grayscale filter -bottom-10 object-contain rounded-2xl"
+            className="absolute -right-10 md:-right-[40%] lg:-right-[20%] -bottom-10  object-cover  rounded-2xl"
           />
       </WobbleCard>
-      <WobbleCard containerClassName="col-span-1 min-h-[300px]">
+      <WobbleCard containerClassName="col-span-1 min-h-[300px] bg-earth">
         <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-          No shirt, no shoes, no weapons.
+          Innover & Optimiser
         </h2>
         <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-          If someone yells “stop!”, goes limp, or taps out, the fight is over.
+          Développer des solutions technologiques pour une meilleure efficacité hydrique.
         </p>
       </WobbleCard>
       <WobbleCard
@@ -39,28 +38,27 @@ const GridThree = () => {
       >
           <Image
             fill
-            src="/water_consulting.jpg"
+            src={`https://jg7oqc4zb0.ufs.sh/f/HvI8a9wNfAj6n1gLsmQHr1RE6bKcglh47LY0BAStjVduQGZy`}
             alt="Water Consulting"
             className="object-cover"
           />
       </WobbleCard>
       <WobbleCard containerClassName="col-span-1 lg:col-span-2 bg-zinc-800 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
-        <div className="max-w-sm">
-          <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-            Signup for blazing-fast cutting-edge state of the art Gippity AI
-            wrapper today!
+        <div className="max-w-sm ">
+          <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white ">
+            Sensibiliser <br /> 
+            Et Former
           </h2>
-          <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-            With over 100,000 mothly active bot users, Gippity AI is the most
-            popular AI platform for developers.
+          <p className="mt-4 md:w-[50%] text-left  text-base/6 text-neutral-200">
+            Éduquer et accompagner les acteurs vers des pratiques durables.
           </p>
         </div>
         <Image
             width={500}
             height={300}
-            src="/water_consulting.jpg"
+            src="/train.jpg"
             alt="Water Consulting"
-            className="absolute -right-10 md:-right-[40%] lg:-right-[20%] -bottom-10 object-contain rounded-2xl"
+            className="absolute -right-10 md:-right-[40%] lg:-right-[30%] -bottom-20 -z-50 object-contain rounded-2xl"
         />
       </WobbleCard>
     </div>

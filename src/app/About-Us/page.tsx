@@ -10,6 +10,7 @@ import Image from "next/image";
 import MissionVision from "@/components/mission-vision";
 import Lenis from "lenis";
 import CoreValues from "@/components/core-value";
+import { Title } from "@/components/title";
 
 export default function AboutUs(){
     useEffect( () => {
@@ -85,11 +86,11 @@ export default function AboutUs(){
         content: (
             <div>
             <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-                Built and launched Aceternity UI and Aceternity UI Pro from scratch
+                Dr. Asma Ben Moussa fonde Manara Water Consulting, une société spécialisée dans la gestion durable de l’eau, l’assainissement, et les solutions environnementales innovantes
             </p>
             <div className="grid grid-cols-2 gap-4">
                 <Image
-                src="/water_consulting.jpg"
+                src="/directrice.jpg"
                 alt="startup template"
                 width={500}
                 height={500}
@@ -184,16 +185,52 @@ export default function AboutUs(){
     ];
     return (
         <>
-            <div className="flex text-white flex-col aboutUs h-[90vh] justify-center items-start rounded-b-[2vw]"
-            
+            <section className="min-h-screen">
+            <motion.div
+                className="w-full h-full"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
             >
-                <TextAnimate className="text ml-10 text-7xl text-wrap leading-none" animation="blurInUp" by="word" once as="h2">
-                    Who We Are
-                </TextAnimate>
-                <div className="mt-4 ml-10 w-full md:w-[50%]">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt eos sequi dignissimos, explicabo perferendis aut laudantium alias dolore voluptatum nam dolores blanditiis sapiente fugit eveniet exercitationem quia quis. Ipsam, deserunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero beatae praesentium maiores consequatur facilis quidem et, unde rerum magni, nemo vero voluptates perferendis optio accusamus laboriosam error itaque debitis ipsam?!</p>
+
+                <div className="flex text-white flex-col bg-gradient-to-r from-secondary to-primary h-[80vh] justify-end pb-5 items-center rounded-b-[2vw]"
+                >
+                <motion.div
+                    className="relative z-10 flex items-center justify-center mb-10 md:mb-20"
+                    initial={{ y: 50, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 0.2, duration: 0.8 }}
+                >
+                    <div className="container px-4 mx-auto text-center">
+                    <motion.h1
+                        className="text-4xl font-bold text-white mb-4 md:text-6xl lg:text-7xl"
+                        initial={{ y: 20, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ delay: 0.4, duration: 0.8 }}
+                    >
+                        Who We Are
+                    </motion.h1>
+                    <motion.div
+                        className="w-20 h-1 bg-blue-400 mx-auto mb-6"
+                        initial={{ scaleX: 0 }}
+                        animate={{ scaleX: 1 }}
+                        transition={{ delay: 0.6, duration: 0.8 }}
+                    />
+                    <motion.p
+                        className="text-lg text-blue-100 max-w-2xl mx-auto"
+                        initial={{ y: 20, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        transition={{ delay: 0.8, duration: 0.8 }}
+                    >
+                        Manara Water Consulting est un bureau d’expertise spécialisé dans la gestion durable de l’eau. Avec plus de 15 ans d’expérience, nous accompagnons nos partenaires dans l’optimisation des ressources hydriques et la protection environnementale.
+                    </motion.p>
+                    </div>
+                </motion.div>
                 </div>
-            </div>
+            </motion.div>
+            </section>
+           
 
             <div className="w-full px-10 md:px-20">
                 <motion.div
@@ -207,21 +244,9 @@ export default function AboutUs(){
             </div>
 
             <div ref={ref} className="w-full mt-20 flex flex-col  justify-center items-center px-20">
-                <div className="text-center mb-16">
-                <motion.h2
-                    className="text-4xl md:text-5xl font-bold text-primary mb-4 dark:text-secondary"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                >
-                    Our Team
-                </motion.h2>
-                <motion.div
-                    className="w-24 h-1 bg-blue-500 mx-auto rounded-full"
-                    initial={{ width: 0 }}
-                    animate={{ width: 96 }}
-                    transition={{ duration: 0.8, delay: 0.3 }}
-                />
+                <div className="flex flex-col justify-center items-center mb-5">
+                    <Title title="Our Team" axAuto={true} />
+                    <p className="w-[90%] md:w-[60%] text-center">Notre équipe est composée d'experts chevronnés issus de divers domaines des ressources en eau, géophysique, hydraulique urbaine, assainissement et du developpement durable</p>
                 </div>
                 <Carousel
                     opts={{

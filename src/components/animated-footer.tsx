@@ -1,103 +1,147 @@
 "use client"
 
-import type React from "react"
-
-import { useRef } from "react"
-import { motion, useScroll, useTransform, useSpring, type MotionValue } from "framer-motion"
 import Link from "next/link"
-import { Input } from "./ui/input"
-import { Textarea } from "./ui/textarea"
-import { Label } from "@radix-ui/react-dropdown-menu"
-import { InteractiveHoverButton } from "./magicui/interactive-hover-button"
-import { Button } from "./ui/button"
-
-
+import { motion } from "framer-motion"
+import { Droplet, Mail, MapPin, Phone, ArrowUpRight } from "lucide-react"
+import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/motion"
+import Image from "next/image"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faEnvelope, faMapLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons"
+import { faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons"
 
 export default function AnimatedFooter() {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end start"],
-  })
-
-  const smoothProgress = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 })
-
   return (
-    <footer ref={containerRef} className="overflow-hidden">
-      <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+    <footer className="text-secondary-foreground overflow-hidden">
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <FadeIn>
             <div>
-              <h4 className="font-bold">
-                Our Vision
-              </h4>
-              <p className="text-gray-400">
-                Pushing the boundaries of digital experiences, one pixel at a time. We blend creativity with technology
-                to craft unforgettable online journeys.
+              <div className="flex items-center space-x-2 mb-1">
+                <Image
+                  src="/logo_sm.png"
+                  alt="Manara Water Consulting"
+                  height={100}
+                  width={100}
+                />
+              </div>
+              <p className="text-secondary-foreground/70 mb-6">
+                Expert en gestion des ressources en eau et solutions environnementales durables.
               </p>
+              <div className="flex space-x-4">
+                <motion.a
+                  href="#"
+                  className="h-10 w-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
+                  whileHover={{ y: -5 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <span className="sr-only">LinkedIn</span>
+                  <FontAwesomeIcon icon={faLinkedin} />
+                </motion.a>
+                <motion.a
+                  href="#"
+                  className="h-10 w-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary/20 transition-colors"
+                  whileHover={{ y: -5 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <span className="sr-only">Twitter</span>
+                  <FontAwesomeIcon icon={faTwitter} />
+                </motion.a>
+              </div>
             </div>
-            <div className="hidden md:block">
-              <h4 className="font-bold">
-                Quick Links
-              </h4>
-              <ul className="space-y-2">
-                {["Home", "About", "Services", "Portfolio", "Contact"].map((item, index) => (
-                  <motion.li
-                    key={item}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+          </FadeIn>
+
+          <StaggerContainer className="space-y-4 col-span-2 hidden md:block ">
+            <div className="grid grid-cols-2 gap-3">
+            <h3 className="text-xl col-span-2 font-semibold mb-6 border-b w-fit">Nos Services</h3>
+              <div className="space-y-4">
+                <StaggerItem>
+                  <Link
+                    href="/services"
+                    className="flex items-center text-secondary-foreground/70 hover:text-primary transition-colors group"
                   >
-                    <Link
-                      href={`#${item.toLowerCase()}`}
-                      className="text-gray-400 hover:text-white transition-colors duration-300"
-                    >
-                      {item}
-                    </Link>
-                  </motion.li>
-                ))}
+                    <span>Overview</span>
+                    <ArrowUpRight className="h-4 w-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </Link>
+                </StaggerItem>
+                <StaggerItem>
+                  <Link
+                    href="/services/FormationsSIG"
+                    className="flex items-center text-secondary-foreground/70 hover:text-primary transition-colors group"
+                  >
+                    <span>Formations SIG & Renforcement des Capacités</span>
+                    <ArrowUpRight className="h-4 w-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </Link>
+                </StaggerItem>
+                <StaggerItem>
+                  <Link
+                    href="/services/EtudedesNappes"
+                    className="flex items-center text-secondary-foreground/70 hover:text-primary transition-colors group"
+                  >
+                    <span>Étude des Nappes & Cours d'Eau</span>
+                    <ArrowUpRight className="h-4 w-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </Link>
+                </StaggerItem>
+              </div>
+              <div className="space-y-4">
+                <StaggerItem>
+                  <Link
+                    href="/services/Protection"
+                    className="flex items-center text-secondary-foreground/70 hover:text-primary transition-colors group"
+                  >
+                    <span>Protection contre les inondations</span>
+                    <ArrowUpRight className="h-4 w-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </Link>
+                </StaggerItem>
+                <StaggerItem>
+                  <Link
+                    href="/services/Assainissement"
+                    className="flex items-center text-secondary-foreground/70 hover:text-primary transition-colors group"
+                  >
+                    <span>Services d'Assainissement</span>
+                    <ArrowUpRight className="h-4 w-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </Link>
+                </StaggerItem>
+                <StaggerItem>
+                  <Link
+                    href="/services/Reetulisation"
+                    className="flex items-center text-secondary-foreground/70 hover:text-primary transition-colors group"
+                  >
+                    <span>Réetulisation des eaux usées</span>
+                    <ArrowUpRight className="h-4 w-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </Link>
+                </StaggerItem>
+              </div>
+            </div>
+          </StaggerContainer>
+
+
+          <FadeIn direction="left">
+            <div>
+              <h3 className="text-xl border-b w-fit font-semibold mb-6">Contact</h3>
+              <ul className="space-y-4">
+                <li className="flex items-center space-x-3 ">
+                  <FontAwesomeIcon icon={faMapLocationDot} />
+                  <span className="text-secondary-foreground/70">Centre Affaires Nour 1, Bloc B, Imm. 5, Appt N°3 - Tamesna, Maroc</span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <FontAwesomeIcon icon={faPhone} />
+                  <div className="flex flex-col gap-2">
+                    <span className="text-secondary-foreground/70">+212-613131063</span>
+                    <span>+212 0537401128</span>
+                  </div>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <FontAwesomeIcon icon={faEnvelope} />
+                  <span className="text-secondary-foreground/70">Benmoussa.asma.2023@gmail.com</span>
+                </li>
               </ul>
             </div>
-            <div>
-              <h4 className="font-bold">
-                Stay Connected
-              </h4>
-              <div className="flex space-x-4 mb-4">
-                {["Twitter", "Facebook", "Instagram", "LinkedIn"].map((social, index) => (
-                  <motion.a
-                    key={social}
-                    href={`https://${social.toLowerCase()}.com`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-white transition-colors duration-300"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                  >
-                    <span className="sr-only">{social}</span>
-                    <i className={`fab fa-${social.toLowerCase()} text-2xl`}></i>
-                  </motion.a>
-                ))}
-              </div>
-              <motion.form
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                className="mt-4"
-              >
-                <Textarea className="mb-5" placeholder="Send Your Messege"></Textarea>
-                <div className="flex gap-4">
-                    <Input 
-                        type="email"
-                        id="email"
-                        name="email"
-                        className=""
-                        placeholder="Enter your email"
-                  />
-                  <Button className="bg-gradient-to-r from-secondary to-primary" type="submit">Send</Button>
-                </div>
-              </motion.form>
-            </div>
-          </div>
+          </FadeIn>
+        </div>
+
+        <div className="border-t border-secondary-foreground/10 mt-12 pt-8 text-center text-secondary-foreground/50">
+          <p>© {new Date().getFullYear()} Manara Water Consulting. Tous droits réservés.</p>
+        </div>
       </div>
     </footer>
   )

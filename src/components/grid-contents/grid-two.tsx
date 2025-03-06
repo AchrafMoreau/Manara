@@ -1,16 +1,21 @@
 import Image from "next/image";
 import { WobbleCard } from "../ui/wobbel-card";
+import { NumberTicker } from "../magicui/number-ticker";
 
 const GridTwo = () => {
     return(
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 max-w-7xl mx-auto w-full">
 
       <WobbleCard containerClassName="col-span-1 min-h-[300px]">
-        <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-          No shirt, no shoes, no weapons.
+        <h2 className="max-w-80  text-left text-balance text-base md:text-xl lg:text-6xl font-semibold tracking-[-0.015em] text-white">
+          +
+          <NumberTicker
+            value={30}
+            className="whitespace-pre-wrap  font-medium tracking-tighter text-white"
+          />
         </h2>
         <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-          If someone yells “stop!”, goes limp, or taps out, the fight is over.
+          Institutions publiques accompagnées pour une gestion durable de l’eau.
         </p>
       </WobbleCard>
       <WobbleCard
@@ -18,39 +23,44 @@ const GridTwo = () => {
         className=""
       >
         <div className="max-w-xs">
-          <h2 className="text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-            Gippity AI powers the entire universe
+          <h2 className="text-left text-balance text-base md:text-xl lg:text-6xl font-semibold tracking-[-0.015em] text-white">
+          +
+          <NumberTicker
+            value={22}
+            className="whitespace-pre-wrap  font-medium tracking-tighter text-white"
+          />
           </h2>
           <p className="mt-4 text-left  text-base/6 text-neutral-200">
-            With over 100,000 mothly active bot users, Gippity AI is the most
-            popular AI platform for developers.
+            Villes et collectivités équipées de solutions intelligentes de gestion de l’eau.
           </p>
         </div>
           <Image
             width={500}
-            height={300}
-            src="/water_consulting.jpg"
+            height={400}
+            src="/ville.jpg"
             alt="Water Consulting"
-            className="absolute -right-4 lg:-right-[40%] grayscale filter -bottom-10 object-contain rounded-2xl"
+            className="absolute -right-4 lg:-right-[40%]  -bottom-10 object-contain rounded-2xl"
           />
       </WobbleCard>
       <WobbleCard containerClassName="col-span-1 lg:col-span-2 bg-zinc-800 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
         <div className="max-w-sm">
-          <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
-            Signup for blazing-fast cutting-edge state of the art Gippity AI
-            wrapper today!
+          <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-6xl font-semibold tracking-[-0.015em] text-white">
+          +
+          <NumberTicker
+            value={15}
+            className="whitespace-pre-wrap  font-medium tracking-tighter text-white"
+          />
           </h2>
           <p className="mt-4 max-w-[26rem] text-left  text-base/6 text-neutral-200">
-            With over 100,000 mothly active bot users, Gippity AI is the most
-            popular AI platform for developers.
+            Entreprises et industries optimisant leur consommation hydrique.
           </p>
         </div>
         <Image
             width={500}
             height={300}
-            src="/water_consulting.jpg"
+            src="/water_company.jpg"
             alt="Water Consulting"
-            className="absolute -right-10 md:-right-[40%] lg:-right-[20%] -bottom-10 object-contain rounded-2xl"
+            className="absolute -right-10 md:-right-[40%] lg:-right-[40%] grayscale filter -bottom-20 object-contain rounded-2xl"
         />
       </WobbleCard>
       <WobbleCard
@@ -59,7 +69,7 @@ const GridTwo = () => {
       >
           <Image
             fill
-            src="/water_consulting.jpg"
+            src="/clients.jpg"
             alt="Water Consulting"
             className="object-cover"
           />
