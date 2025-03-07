@@ -281,3 +281,6 @@
   position: relative;
   overflow: hidden;
 }
+.leaflet-control-attribution {
+  display: none;
+}

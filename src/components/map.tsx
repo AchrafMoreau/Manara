@@ -1,40 +1,26 @@
-'use client'
+import { MapContainer, Marker, Popup, TileLayer, Tooltip } from "react-leaflet"
+import "leaflet/dist/leaflet.css"
+import "leaflet-defaulticon-compatibility"
+import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css"
 
-import { GoogleMap } from "@react-google-maps/api";
+export default function MapComponent() {
+  const zoom = 13;
+  const position = {
+    lat: 33.845978, 
+    lng: -6.939560
+  }
 
-const defaultMapContainerStyle = {
-    width: '100%',
-    height: '50vh',
-    borderRadius: '15px 15px 15px 15px',
-};
-
-const defaultMapCenter = {
-    lat: 35.8799866,
-    lng: 76.5048004
+  return (
+        <MapContainer center={position} zoom={zoom} scrollWheelZoom={false} className="h-[300px] rounded-lg z-0">
+            <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            <Marker position={position}>
+            <Popup>
+                A pretty CSS3 popup. <br /> Easily customizable.
+            </Popup>
+            </Marker>
+        </MapContainer>
+  )
 }
-
-const defaultMapZoom = 18
-
-//Map options
-const defaultMapOptions = {
-    zoomControl: true,
-    tilt: 0,
-    gestureHandling: 'auto',
-    mapTypeId: 'satellite',
-};
-
-const MapComponent = () => {
-    return (
-        <div className="w-full">
-            <GoogleMap
-                mapContainerStyle={defaultMapContainerStyle}
-                center={defaultMapCenter}
-                zoom={defaultMapZoom}
-                options={defaultMapOptions}
-            >
-            </GoogleMap>
-        </div>
-    )
-};
-
-export { MapComponent };

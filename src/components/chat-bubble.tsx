@@ -11,14 +11,19 @@ export default function ChatBubble() {
   const [messages, setMessages] = useState<{ text: string; isUser: boolean }[]>([])
   const [input, setInput] = useState("")
   const [isLoading, setIsLoading] = useState(false)
+  const messagesContainerRef = useRef<HTMLDivElement>(null)
   const messagesEndRef = useRef<HTMLDivElement>(null)
 
-  // Auto-scroll to bottom of messages
   useEffect(() => {
-    if (messagesEndRef.current) {
-      messagesEndRef.current.scrollIntoView({ behavior: "smooth" })
+    scrollToBottom()
+  }, [messages, isLoading])
+  // Auto-scroll to bottom of messages
+    const scrollToBottom = () => {
+    if (messagesContainerRef.current) {
+      const { scrollHeight, clientHeight } = messagesContainerRef.current
+      messagesContainerRef.current.scrollTop = scrollHeight - clientHeight
     }
-  }, [])
+  }
 
   const toggleChat = () => {
     setIsOpen(!isOpen)
@@ -48,7 +53,7 @@ export default function ChatBubble() {
         setMessages((prev) => [
             ...prev,
             {
-            text: data,
+            text: data.message,
             isUser: false,
             },
         ])
@@ -80,14 +85,14 @@ export default function ChatBubble() {
           >
             {/* Chat header */}
             <div className="bg-gradient-to-r from-primary to-secondary p-4 text-white flex justify-between items-center">
-              <h3 className="font-medium">Customer Service</h3>
+              <h3 className="font-medium">AI Chatbot</h3>
               <button onClick={toggleChat} className="text-white hover:bg-white/20 rounded-full p-1 transition-colors">
                 <X size={18} />
               </button>
             </div>
 
             {/* Messages container */}
-            <div className="h-80 overflow-y-auto p-4 bg-gray-50">
+            <div className="h-80 overflow-y-auto z-999 p-4 bg-gray-50 " ref={messagesContainerRef}>
               {messages.length === 0 ? (
                 <div className="flex items-center justify-center h-full text-gray-500">
                   <p>Send a message to get started!</p>

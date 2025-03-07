@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import ChatBubble from "@/components/chat-bubble";
+import { ChatWidget } from "@/components/chat-wediget";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
