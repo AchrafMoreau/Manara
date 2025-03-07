@@ -10,6 +10,31 @@ export default {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  safelist: [
+    // Light mode colors
+    "bg-blue-100", "text-blue-600", "border-blue-200",
+    "bg-blue-500", "bg-blue-600", "text-blue-500", "border-blue-500",
+    "bg-green-100", "text-green-600", "border-green-200",
+    "bg-green-600", "border-green-600",
+    "bg-gray-100", "text-gray-600", "border-gray-200",
+    "bg-gray-600", "border-gray-600",
+    "bg-yellow-100", "text-yellow-600", "border-yellow-200",
+    "bg-yellow-500", "border-yellow-500",
+    "bg-purple-100", "text-purple-600", "border-purple-200",
+    "bg-purple-600", "border-purple-600",
+    
+    // Dark mode colors
+    "dark:bg-blue-900/30", "dark:text-blue-400", "dark:border-blue-800/50",
+    "dark:bg-blue-500", "dark:border-blue-500", "dark:text-blue-300",
+    "dark:bg-green-900/30", "dark:text-green-400", "dark:border-green-800/50",
+    "dark:bg-green-500", "dark:border-green-500",
+    "dark:bg-gray-800/30", "dark:text-gray-400", "dark:border-gray-700/50",
+    "dark:bg-gray-500", "dark:border-gray-500",
+    "dark:bg-yellow-900/30", "dark:text-yellow-300", "dark:border-yellow-800/50",
+    "dark:bg-yellow-400", "dark:border-yellow-400",
+    "dark:bg-purple-900/30", "dark:text-purple-400", "dark:border-purple-800/50",
+    "dark:bg-purple-500", "dark:border-purple-500",
+  ],
   theme: {
   	extend: {
   		colors: {
