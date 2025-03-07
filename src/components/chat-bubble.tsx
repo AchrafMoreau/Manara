@@ -46,17 +46,21 @@ export default function ChatBubble() {
             body: JSON.stringify({ message: [{ role: "user", content: input }] })
         })
 
-        const data = await response.json()
         if(!response.ok){
             throw new Error("Faild To Fetch Api")
         }
-        setMessages((prev) => [
-            ...prev,
-            {
-            text: data.message,
-            isUser: false,
-            },
-        ])
+        const reader = response.body?.getReader();
+        const decoder = new TextDecoder();
+        let aiResponse = "";
+
+        while (true) {
+          setIsLoading(false)
+          const { done, value } = await reader?.read()
+          if (done) break;
+          const chunk = decoder.decode(value, { stream: true });
+          aiResponse += chunk;
+          setMessages((prev) => [...prev.slice(0, -1), { text: aiResponse, isUser: false }]);
+        }
     }catch(error: any){
         console.log(error)
         setMessages((prev) => [

@@ -54,16 +54,30 @@ export async function POST(req : Request){
                     Let's assist users with professionalism and expertise!`
                 },
                 ...message,
-            ]
+            ],
+            temperature: 0.6, 
+            max_tokens: 250,  
+            stream:true
         })
 
-        if(!complition.choices[0].message.content){
-            throw new Error("No Response Content Resirved")
-        }
+        const encoder = new TextEncoder();
+        const stream = new ReadableStream({
+        async start(controller) {
+            for await (const chunk of complition) {
+                    const text = chunk.choices[0]?.delta?.content || "";
+                    controller.enqueue(encoder.encode(text));
+                }
+                controller.close();
+            },
+        });
 
-        return NextResponse.json({
-            message: complition.choices[0].message.content
-        })
+        return new Response(stream, {
+            headers: {
+                "Content-Type": "text/event-stream",
+                "Cache-Control": "no-cache",
+                "Connection": "keep-alive",
+            },
+        });
     }catch(error: any){
         console.log("api Error : ", error.message)
         return NextResponse.json(
