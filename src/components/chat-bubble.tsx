@@ -53,13 +53,20 @@ export default function ChatBubble() {
         const decoder = new TextDecoder();
         let aiResponse = "";
 
+        setMessages((prev) => [...prev, { text: "", isUser: false }]);
+
+
         while (true) {
           setIsLoading(false)
           const { done, value } = await reader?.read()
           if (done) break;
           const chunk = decoder.decode(value, { stream: true });
           aiResponse += chunk;
-          setMessages((prev) => [...prev.slice(0, -1), { text: aiResponse, isUser: false }]);
+          setMessages((prev) =>
+            prev.map((msg, index) =>
+              index === prev.length - 1 ? { text: aiResponse, isUser: false } : msg
+            )
+          );
         }
     }catch(error: any){
         console.log(error)
