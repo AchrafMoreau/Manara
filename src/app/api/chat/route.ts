@@ -1,6 +1,9 @@
 import { NextResponse } from "next/server";
 import OpenAI from 'openai'
 
+export const maxDuration = 60;
+export const dynamic = 'force-dynamic';
+
 if(!process.env.DEEPSEEK_API_KEY){
     throw new Error("DEEPSEEK_API_KEY is not set in env file")
 }
