@@ -4,8 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import ChatBubble from "@/components/chat-bubble";
-import { ChatWidget } from "@/components/chat-wediget";
+import MagicChatBubble  from "@/components/chat-bubble";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -39,7 +38,7 @@ export default function RootLayout({
           >
             <Navbar />
             {children}
-            <ChatBubble />
+            <MagicChatBubble />
             <Footer />
         </ThemeProvider>
       </body>
